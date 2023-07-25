@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/venv/app.py"
+      "dest": "venv/app.py"
     }
   ]
 }

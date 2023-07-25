@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+    <script>
+        function View3D() {
+            threeDmodel = document.getElementById("3dmodel");
+            twoDmodel = document.getElementById("flex-image-container");
+            ViewButton = document.getElementById("View3D");
+
+            if (threeDmodel.style.visibility == "visible") {
+                threeDmodel.style.visibility = "hidden";
+                twoDmodel.style.display = "block";
+                ViewButton.textContent = "VIEW 3D";
+            } else {
+                threeDmodel.style.visibility = "visible";
+                twoDmodel.style.display = "none";
+                ViewButton.textContent = "VIEW 2D";
+            }
+
+            //if landscape
+            console.log(1)
+            if (window.innerHeight < window.innerWidth) {
+            console.log(2)
+
+                if (threeDmodel.src !== "https://render.lucio.se/house/ilfornello_100k#39b0050043bd7251b9383258bfc90fd2400361f200000000") {
+                    console.log(3)
+                    threeDmodel.src = "https://render.lucio.se/house/ilfornello_100k#39b0050043bd7251b9383258bfc90fd2400361f200000000"
+                }
+            }
+            else {
+                if (threeDmodel.src !== "https://render.lucio.se/house/ilfornello_100k#bf669da043bd7199bfedb9e1bfc85d56c02c28a400000000") {
+                    threeDmodel.src = "https://render.lucio.se/house/ilfornello_100k#bf669da043bd7199bfedb9e1bfc85d56c02c28a400000000"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="View3D" id="View3D" onclick="View3D()">
+        <span>VIEW 3D</span>
+    </div>
+    <iframe id = "3dmodel" src="https://render.lucio.se/house/ilfornello_100k#bf669da043bd7199bfedb9e1bfc85d56c02c28a400000000"></iframe>
+    <div class="flex-image-container" id="flex-image-container">
+        <div id = "ProjectorPin" onclick="window.location = '/projector'">
+        <div class="PinContainer">
+            <div class="PinTriangle"></div>
+            <div class="PinTriangleEdge"></div>
+            <div class="PinText">
+                    <span>PROJECTOR</span>
+                </div>
+            <div class="PinRectangle">
+
+            </div>
+        </div>
+    </div>
+        <div id = "PoolPin" onclick="window.location = '/pool'">
+            <div class="PinContainer">
+                <div class="PinTriangle"></div>
+                <div class="PinTriangleEdge"></div>
+                <div class="PinText">
+                        <span>POOL</span>
+                    </div>
+                <div class="PinRectangle">
+                </div>
+            </div>
+        </div>
+        <div id = "TheCavePin" onclick="window.location = '/thecave'">
+            <div class="PinContainer">
+                <div class="PinTriangle"></div>
+                <div class="PinTriangleEdge"></div>
+                <div class="PinText">
+                        <span>"THE CAVE"</span>
+                    </div>
+                <div class="PinRectangle">
+                </div>
+            </div>
+        </div>
+        <div id = "BarPin" onclick="window.location = '/bar'">
+            <div class="PinContainer">
+                <div class="PinTriangle"></div>
+                <div class="PinTriangleEdge"></div>
+                <div class="PinText">
+                        <span>BAR</span>
+                    </div>
+                <div class="PinRectangle"></div>
+            </div>
+        </div>
+        <div id = "SpotPin" onclick="window.location = '/swirland'">
+            <div class="PinContainer">
+                <div class="PinTriangle"></div>
+                <div class="PinTriangleEdge"></div>
+                <div class="PinText">
+                    <span>SWIRLAND</span>
+                </div>
+                <div class="PinRectangle">
+
+                </div>
+            </div>
+        </div>
+        <div id = "KitchenPin" onclick="window.location = '/kitchen'">
+            <div class="PinContainer">
+                <div class="PinTriangle"></div>
+                <div class="PinTriangleEdge"></div>
+                <div class="PinText">
+                    <span>KITCHEN</span>
+                </div>
+                <div class="PinRectangle">
+                </div>
+            </div>
+        </div>
+        <div class = "image-container">
+            <img class="image" id="mainimage" src="https://i.ibb.co/j5NJp0k/DJI-0257-2.jpg" alt="Your Image">
+            <div class="fade-out"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+

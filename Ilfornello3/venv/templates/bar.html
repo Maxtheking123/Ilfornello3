@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox Website</title>
+  <link rel="stylesheet" href="/static/SubPageStyle.css">
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class = "HeadlineContainer">
+  <div class="home-button-container">
+    <div class="home-button" onclick="window.location = '/'">
+      <div class="HomeIcon"></div>
+    </div>
+  </div>
+  <span class = "Headline">The Bar</span>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="content">
+        <video class="image" autoplay loop muted>
+          <source src="{{ url_for('static', filename='BarImages/BarVideo.mp4') }}" type="video/mp4">
+          <!-- Add more <source> elements for additional video formats if desired -->
+          Your browser does not support the video tag.
+        </video>
+        <div class="description">
+          <p>The Ilfornello Bar area exists as a place to work, socialize, and relax while enjoying cold drinks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="content">
+        <img loading="lazy" class="image" id = "BarImg" src="{{ url_for('static', filename='BarImages/BarImage2.JPG') }}" alt="Image 2" style="">
+        <div class="description">
+          <p>The Bar is supplied with glasses and seats but everything else is brought by the guests.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="content">
+        <img class="image" id="FridgeImg" src="{{ url_for('static', filename='BarImages/BarImage3.JPG') }}" alt="Image 2" style="">
+        <div class="description">
+          <p>The Bar has a mini fridge that residents can stock with drinks of their choosing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="content">
+        <img class="image" src="{{ url_for('static', filename='BarImages/BarImage1.JPG') }}" alt="Image 2" style="object-position: -10vh;">
+        <div class="description">
+          <p>The Bar area also has plenty of seats, everything from bar stools, to chairs and even a swing and a hanging hammock chair.</p>
+          <p>It's a great place to not only sit and drink but is also a great place to work.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Add more rows here as needed -->
+  </div>
+</body>
+</html>

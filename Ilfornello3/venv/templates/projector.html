@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox Website</title>
+  <link rel="stylesheet" href="/static/SubPageStyle.css">
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class = "HeadlineContainer">
+  <div class="home-button-container">
+    <div class="home-button" onclick="window.location = '/'">
+      <div class="HomeIcon"></div>
+    </div>
+  </div>
+  <span class = "Headline">Projector</span>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="content">
+        <video class="image" autoplay loop muted>
+          <source src="{{ url_for('static', filename='ProjectorImages/ProjectorVid.mp4') }}" type="video/mp4">
+          <!-- Add more <source> elements for additional video formats if desired -->
+          Your browser does not support the video tag.
+        </video>
+        <div class="description">
+          <p>Ilfornello has a projector that the guests can borrow to have community movie night where everyone is invited!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="content">
+        <img class="image" src="{{ url_for('static', filename='ProjectorImages/ProjectorAreaPool.JPG') }}" alt="Image 2" id="ProjectorPoolArea">
+        <div class="description">
+          <p>The Projector can be moved and so can the canvas. </p>
+          <p>There are two common places to place the projector. One is by the pool and is a perfect place to sit and watch a movie while enjoying the views and the pool.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="content">
+        <img class="image" src="{{ url_for('static', filename='ProjectorImages/ProjectorAreaTop.JPG') }}" alt="Image 2" style="object-position: 0vh;">
+        <div class="description">
+          <p>The other common place to place the projector is a bit higher up and is also a great place to have it since it is a bit more private and is in range of the hammock incase you want to lay down and watch a movie.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Add more rows here as needed -->
+  </div>
+</body>
+</html>

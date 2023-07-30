@@ -31,4 +31,4 @@ def Kitchen():
     return render_template('templates/kitchen.html')
 
 if __name__ == '__main__':
-    app.run(host="192.168.88.20")
+    app.run()

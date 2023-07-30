@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 import os 
 
-dir_path = os.path.dirname(os.path.realpath(__file__)) + "/"
+dir_path = os.getcwd() + "/files/"
 app = Flask(__name__)
 
 @app.route('/')
